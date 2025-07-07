@@ -29,6 +29,11 @@ app.use(cors())
 
 app.use('/api',empleadoRoutes)
 
+// Ruta raíz para Render
+app.get('/', (req, res) => {
+  res.send('Servidor backend de empleados activo 🚀');
+});
+
 //habilitamos el puerto 
 const port = process.env.PORT || 4000
 const server = app.listen(port,()=>{
